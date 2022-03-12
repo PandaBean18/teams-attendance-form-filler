@@ -15,7 +15,7 @@ def fill_form():
         prev = latest_message['bodyPreview']
         prev_arr = prev.split(' ')
         if 'RAJAN' in prev_arr: # Making sure that it is uploaded by the correct teacher
-            print('One new message from Rajan Gautam, checking if the message has forms link')
+            print('One new message from <your teacher>, checking if the message has forms link')
         else:
             print('No new messages found.')
             return False # Return statement to ensure that the function does not proceed further
@@ -37,7 +37,7 @@ def fill_form():
 
 while True: 
     current_time = time.strftime('%H:%M')
-    if current_time > '13:13' and current_time < '13:45':
+    if current_time > '13:15' and current_time < '13:45': # My teacher uploads at this time
         if fill_form():
             print()
             break 
