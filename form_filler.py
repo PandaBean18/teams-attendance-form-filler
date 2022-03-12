@@ -17,7 +17,7 @@ class FormsFiller:
         self.chrome_options = Options()
         self.chrome_options.add_argument('--headless') #ensure that GUI is off 
         self.chrome_options.add_argument('--no-sandbox')
-        self.webdriver_service = Service('/home/raghapbean/chromedriver/stable/chromedriver') # Path to chromedriver 
+        self.webdriver_service = Service('/path/to/chromedriver') # Path to chromedriver 
         self.browser = webdriver.Chrome(service = self.webdriver_service, options = self.chrome_options)
 
     def log_in(self):
