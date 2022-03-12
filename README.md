@@ -14,6 +14,8 @@ name you want. Then go to API permissions tab of your app and add these permissi
 ## Authentication for graph API 
 The code was taken from [Microsoft authentication library for python](https://github.com/AzureAD/microsoft-authentication-library-for-python) (this [example](https://github.com/AzureAD/microsoft-authentication-library-for-python/blob/dev/sample/username_password_sample.py) in particular
 
+install microsoft authentication library using ```pip install msal```
+
 Firstly, you will need to create a file called parameters.json with such format: 
 ```json
 {
@@ -26,6 +28,8 @@ Firstly, you will need to create a file called parameters.json with such format:
 }
 ```
 Now you can copy the code from my [ms graph auth](https://github.com/PandaBean18/teams-attendance-form-filler/blob/main/ms_graph_auth.py) file or from [here](https://github.com/AzureAD/microsoft-authentication-library-for-python/blob/dev/sample/username_password_sample.py)
+
+**Note:** The first time that you will try running this, the program will print a url and exit, you will need to go to the url and authorize your application. After you have            authorized it, you might get something that says 'something went wrong, no redirect url provided' (I dont remember this was a month ago.), it is alright and your app has        been authorized, there was just no redirect url (duh). 
 
 # Step 2: Creating a flow with microsoft power automate
 Create a flow that sends messages to your outlook account when a new message is added to the channel with [Ms power automate](https://powerautomate.microsoft.com) (use school acc lol)
@@ -53,3 +57,8 @@ file, i have created a function to deal with this, and a while true loop so that
 
 **Note:** ensure that you are only calling the function when needed, it would be unwise to spam the API and it will end up taking more processing than required. i have created
         my loop in a way so that it only checks for new mails when i know that teacher will upload the link, that too has a 10 second cool down to avoid spamming.
+        
+# Resources
+[Microsoft azure AD usage](https://github.com/AzureAD/microsoft-authentication-library-for-python)
+
+[Setting up selenium for wsl](https://cloudbytes.dev/snippets/run-selenium-and-chrome-on-wsl2)
