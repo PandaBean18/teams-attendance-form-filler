@@ -1,4 +1,4 @@
-#This file in particular has been taken from microsoft azure auth samples on github (check the place i forked it from)
+#This file in particular has been taken from microsoft azure auth samples on github 
 #I have wrapped the code in a class because i thought it would be more managable like that. 
 #I have also tried to keep most comments from original example so that what I have done makes sense (hopefully)
 
