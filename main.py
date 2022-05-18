@@ -14,7 +14,7 @@ def fill_form():
         # Body preview, the attendance form that my teacher uploads just contains the link, so the link is there in preview as well
         prev = latest_message['bodyPreview']
         prev_arr = prev.split(' ')
-        if 'RAJAN' in prev_arr: # Making sure that it is uploaded by the correct teacher
+        if '<YOUR_TEACHER\'S_USERNAME' in prev_arr: # Making sure that it is uploaded by the correct teacher
             print('One new message from <your teacher>, checking if the message has forms link')
         else:
             print('No new messages found.')
